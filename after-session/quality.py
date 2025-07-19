@@ -212,7 +212,7 @@ if st.session_state.current_page == "quality":
     for q_label, options in questions.items():
         answer = st.radio(q_label, options, index=None, key=q_label, horizontal=True)
         if answer is not None:
-            scores[q_label] = options.index(answer)
+            scores[q_label] = answer
         else:
             unanswered.append(q_label)
     if st.button("回答を提出"):
