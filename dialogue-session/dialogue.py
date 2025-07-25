@@ -13,7 +13,7 @@ def stream_counselor_reply(counselor_reply):
 if st.session_state.current_page == "dialogue":
     st.title("対話セッション")
 
-    scenario_file = "dialogue-session/counselor_scenario_message_only.json"
+    scenario_file = "dialogue-session/counselor_scenario_ver2.json"
 
     if "counselor_turn" not in st.session_state:
         st.session_state.counselor_turn = 0
@@ -68,6 +68,7 @@ if st.session_state.current_page == "dialogue":
     
     # 23ターン終了
     else:
+        time.sleep(1)
         st.success("これで対話セッションは終了です。")
         if st.button("「認知の変化の回答」に進む"):
             st.session_state.current_page = "cc_immediate"
