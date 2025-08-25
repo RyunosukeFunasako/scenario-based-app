@@ -125,7 +125,7 @@ if st.session_state.current_page == "qids":
             st.session_state.qids_answers = scores
             st.success("回答ありがとうございました。")
             time.sleep(1)
-            st.session_state.current_page = "dialogue"
+            st.session_state.current_page = "attention"
             st.rerun()
 
 else:

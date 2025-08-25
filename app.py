@@ -2,6 +2,7 @@ import streamlit as st
 
 description_page = st.Page("description.py", title="実験の説明", icon="✅")
 qids_page = st.Page("before-session/qids.py", title="抑うつ症状の検査", icon="😔")
+attention_page = st.Page("attention.py", title="対話セッションを始める前に", icon="👀")
 dialogue_page = st.Page("dialogue-session/dialogue.py", title="対話セッション", icon="👩‍⚕️")
 cc_immediate_page = st.Page("after-session/cc_immediate.py", title="認知変化の評価", icon="🧠")
 rapport_page = st.Page("after-session/rapport.py", title="カウンセラーの評価", icon="📄")
@@ -40,6 +41,8 @@ if st.session_state.current_page == "description":
     pg = st.navigation([description_page])
 elif st.session_state.current_page == "qids":
     pg = st.navigation([qids_page])
+elif st.session_state.current_page == "attention":
+    pg = st.navigation([attention_page])
 elif st.session_state.current_page == "dialogue":
     pg = st.navigation([dialogue_page])
 elif st.session_state.current_page == "cc_immediate":
